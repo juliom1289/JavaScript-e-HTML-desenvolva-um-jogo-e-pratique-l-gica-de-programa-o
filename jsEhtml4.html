@@ -1,0 +1,33 @@
+<!--- FUTEBOL -->
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function write(frase){
+        pulaLinha();
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var pontuacaoAnterior = parseInt(prompt("Digite o número de vitórias do ano passado:"));
+    //converter texto do usuário para número 
+    var vitorias = parseInt(prompt("Digite o número de vitórias do seu time:"));
+    var empates = parseInt(prompt("Digite o número de empates do seu time:"));
+    var pontos = (vitorias * 3) + empates;
+
+    if (pontos > pontuacaoAnterior) {
+        write("Seu time está melhor do que no ano passado.");
+    }
+
+    if (pontos < pontuacaoAnterior) {
+        write("Seu time está pior do que no ano passado.");
+    }
+
+    if (pontos == pontuacaoAnterior) {
+        write("Seu time está igual igual ao ano passado.");
+    }
+</script>

@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<!--Cria uma caixa de resposta e um botão-->
+<input/>
+<button>COMPARE COM O SEGREDO</button>
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function write(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var segredo = Math.round(Math.random * 10)
+    var input = document.querySelector("input");
+    input.focus();
+
+    console.log(segredo)
+    function verifica() {
+        
+        // input.value é o valor numérico enserido na caixa de texto ao lado do botão
+        if(input.value == segredo) {
+            alert("Você Acertou")
+        } else {
+            alert("Você Errou")
+        }
+
+        input.value = ""
+        // depois o alert, o cursor volta altomaticamente a caixa de texto
+        input.focus();
+    }
+
+    // var button é associada ao button do html
+    var button = document.querySelector("button");
+    // quando clicado, func verifica é executada
+    button.onclick = verifica;
+
+
+</script>

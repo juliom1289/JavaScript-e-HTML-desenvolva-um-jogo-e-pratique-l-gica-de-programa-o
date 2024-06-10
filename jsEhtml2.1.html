@@ -1,0 +1,49 @@
+<meta charset = "UTF-8">
+
+<script>
+    // forma de se escrever em html no meio do código Js
+    document.write("A idade de Flávio é 18 <br>");
+
+    //a saida é 38
+    document.write(18 + 20 + "<br>");
+    //a saida é 1820 e uma linha será pulada entre esse e o próximo output
+    document.write("18" + "20" + "<br>");
+
+    //a saida será "A soma das idades é 20"
+    document.write("A soma das idades é " + (20 + 10 + 30)/ 3);
+
+    var ano = 2024;
+
+    //Flavio tem 27 anos
+    //Roberto tem 28 anos
+    document.write("<br> Flávio tem " + (ano - 1997) + " anos <br>");
+    document.write("Roberto tem " + (ano - 1996) + " anos <br>");
+
+    ano = 2034;    
+
+    function pular2Linhas() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    //Flavio tem 37 anos
+    //Roberto tem 38 anos
+    document.write("Flávio tem " + (ano - 1997) + " anos");
+    pular2Linhas();
+    document.write("Roberto tem " + (ano - 1996) + " anos <br>");
+
+    var idadeFlavio = 37;
+    var idadeRoberto = 38;
+    var mediaIdades = Math.round((idadeFlavio + idadeRoberto) / 2);
+    document.write("A média das idades é " + mediaIdades);
+
+    //func para write.document() e pular 2 linhas no inicio e final
+    function write(mensagem) {
+        pular2Linhas()
+        document.write(mensagem)
+        pular2Linhas()
+    }
+
+    write("Muito mais fácil de se escrever");
+  
+</script>
